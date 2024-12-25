@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+     <h1>Данные из MongoDB</h1>
+     <a href="/add">Добавить информацию о пользователе</a>
+     <table>
+         <thead>
+             <tr>
+                 <th>Name</th>
+                 <th>Age</th>
+                 <th>ID</th>
+             </tr>
+         </thead>
+         <tbody>
+             {% for doc in data %}
+             <tr>
+                 <td>{{ doc.name }}</td>
+                 <td>{{ doc.age }}</td>
+                 <td>{{ doc._id }}</td>
+             </tr>
+             {% endfor %}
+         </tbody>
+     </table>
+{% endblock %}

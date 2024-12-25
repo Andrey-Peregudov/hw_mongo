@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2> Страница пользователя </h2>
+    <p>
+    {{ user.name }}</p>
+    <p>{{ user.id }}</p>
+
+    {% for i in user.address %}
+        <p>{{ i.city }}</p>
+        <p>{{ i.ulica }}</p>
+    {% endfor %}
+
+{% endblock %}

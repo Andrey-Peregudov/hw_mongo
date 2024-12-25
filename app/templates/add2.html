@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+     <h1>Информация о пользователе</h1>
+     <form method="post" action="/submit">
+         <label for="name">Имя:</label><br>
+         <input type="text" id="name" name="name"><br>
+         <label for="age">Возраст:</label><br>
+         <input type="number" id="age" name="age"><br><br>
+         <input type="submit" value="Submit">
+     </form>
+{% endblock %}
